@@ -9,13 +9,15 @@ class ThongTinDatGhe extends Component {
       <div>
         <div className="mt-5">
           <button className="gheDuocChon"></button>{" "}
-          <span style={{ fontSize: "30px", color: "#fff" }}>ghế được chọn</span>
+          <span style={{ fontSize: "30px", color: "#fff" }}>
+            ghế đã được đặt
+          </span>
           <br />
           <button className="gheDangChon"></button>{" "}
-          <span style={{ fontSize: "30px", color: "#fff" }}>ghế được chọn</span>
+          <span style={{ fontSize: "30px", color: "#fff" }}>ghế đang chọn</span>
           <br />
           <button className="gheTrong"></button>{" "}
-          <span style={{ fontSize: "30px", color: "#fff" }}>ghế được chọn</span>
+          <span style={{ fontSize: "30px", color: "#fff" }}>ghế trống</span>
           <br />
         </div>
 
@@ -25,7 +27,7 @@ class ThongTinDatGhe extends Component {
               <tr className="text-light" style={{ fontSize: "1.2rem" }}>
                 <th>ghế</th>
                 <th>giá</th>
-                <th>action</th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
@@ -45,7 +47,7 @@ class ThongTinDatGhe extends Component {
                         }}
                         className="btn btn-danger"
                       >
-                        Huy
+                        hủy
                       </button>
                     </td>
                   </tr>
@@ -54,8 +56,7 @@ class ThongTinDatGhe extends Component {
             </tbody>
             <tbody>
               <tr className="text-danger">
-                <td></td>
-                <td>Thanh Tien</td>
+                <td>thành tiền</td>
                 <td>
                   {this.props.danhSachGheDangDat
                     .reduce((tongTien, gheChon, index) => {
