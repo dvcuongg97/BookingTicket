@@ -1,0 +1,30 @@
+
+1. npm i redux react-redux
+
+2. setup
+    > setup ở file index.js 
+        >> import createStore from Redux
+        >> import Provider form react-redux
+        >> import rootReducer form "rootReducer file"
+        >> let store = createStore(rootReducer)
+        >> root.render(
+            <Provider store={store}>
+            <App />
+            <Provider />
+        )
+    > setup ở file rootReducer.js
+        >> import {conbineReducer} from "Redux"
+        >> import {shoeReducer} from "shoeReducer file | store tổng"
+        >> export let rootReducer = combineReducer({
+            shoeReducer: shoeReducer
+        })
+    > setup ở store tổng
+        >> rxreducer
+        >> export let nameReducer = (state = initialState, action)
+
+
+reducer là nơi viết logic update data của redux
+
+mapStateToProps: lấy data từ redux đưa về component dưới dạng props
+mapDispatchToProps: đưa action lên store tổng
+
